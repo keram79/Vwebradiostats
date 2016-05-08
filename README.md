@@ -21,6 +21,7 @@ STARTDATE must be older than ENDDATE
 ```
 Showing statistics for timeframe 2016-04-27 till 2016-04-28, which is 2 days in total
 The 10 most played songs during those 2 days were:
+  [count artist,song]
    8 Charlie Puth,One call away
    7 Justin Bieber,Love yourself
    6 Milow,Howling at the moon
