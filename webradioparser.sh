@@ -50,8 +50,9 @@ done
 
 ##################################
 function statistics {
-	#Most played songs in timeframe
+	# Most played songs in timeframe
 	printf "The 10 most played songs during those `expr $TIMESPAN + 1` days were:\n"
+	printf "  [count artist,song]\n"
 	cat $TEMPFILE | cut -c 18- | sort | uniq -c | sort -nr | head  # cat the tempfile and do some formatting, then output the top10
 }
 
@@ -61,6 +62,7 @@ function statistics {
 if [ "$FUNCT" == "LIST" ]; then
 	getsongs
 	printf "Showing the songs for timeframe $DATEFROM till $DATETO, which is `expr $TIMESPAN + 1` days in total\n"
+	printf "[date,time,artist,song]\n"
 	cat $TEMPFILE
 fi
 
